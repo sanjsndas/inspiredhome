@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspired Home Details — Interior Design & Architecture Journal</title>
+    <meta name="description" content="Inspired Home Details is an independent editorial journal covering residential architecture, interior design, space planning, materials, lighting, and practical home design knowledge.">
+    <meta name="author" content="Inspired Home Details Editorial Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inspired Home Details — Interior Design & Architecture Journal">
+    <meta property="og:description" content="Long-form articles and practical guides on residential architecture, interiors, materials, lighting, and space planning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inspiredhomedetails.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Inspired Home Details">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://inspiredhomedetails.com/">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Inspired Home Details",
+      "description": "An independent editorial journal covering residential architecture, interior design, and practical home design knowledge.",
+      "url": "https://inspiredhomedetails.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inspired Home Details",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://inspiredhomedetails.com/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "The Anatomy of a Well-Planned Living Room"},
+          {"@type": "ListItem", "position": 2, "name": "How Light Shapes the Experience of a Home"},
+          {"@type": "ListItem", "position": 3, "name": "Material Honesty: Why Natural Finishes Endure"}
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        /* ========== EDITORIAL RESET & BASE ========== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Editorial palette — warm, refined, print-inspired */
+            --ink: #1a1817;
+            --ink-soft: #3d3a38;
+            --ink-muted: #6b6562;
+            --paper: #faf8f5;
+            --paper-warm: #f3efe9;
+            --paper-card: #ffffff;
+            --rule: #e0dbd4;
+            --rule-light: #ebe7e0;
+            --accent: #9b6b4a;        /* oxidized copper / warm terracotta */
+            --accent-soft: #c49a7c;
+            --accent-bg: #f5ede6;
+            --sage: #6b7b6e;
+            --sage-bg: #edf0ed;
+            --slate: #4a5568;
+            --slate-bg: #edf2f7;
+
+            --font-serif: 'Georgia', 'Times New Roman', 'Palatino', 'Book Antiqua', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', monospace;
+
+            --max-content: 1240px;
+            --max-article: 740px;
+
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2.5rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+        }
+
+        html {
+            font-size: 17px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-transform: none;
+            margin-bottom: var(--space-xs);
+        }
+
+        .label-category {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .label-category--sage { color: var(--sage); }
+        .label-category--slate { color: var(--slate); }
+
+        .meta {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .meta span + span::before {
+            content: "·";
+            margin: 0 0.5em;
+            color: var(--rule);
+        }
+
+        .reading-time {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .excerpt {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .container--narrow {
+            max-width: var(--max-article);
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-lg) 0;
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding-left: var(--space-xl);
+            padding-right: var(--space-xl);
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+        }
+
+        .brand-mark {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        .brand-mark em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .brand-tagline {
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            border-left: 1px solid var(--rule);
+            padding-left: 0.8rem;
+        }
+
+        .site-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        .site-nav a {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-nav a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--rule);
+            padding: 0.4rem 0.7rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            cursor: pointer;
+            color: var(--ink-soft);
+            letter-spacing: 0.04em;
+        }
+
+        /* ========== SEARCH ========== */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-bar input {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            padding: 0.45rem 0.75rem;
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            color: var(--ink);
+            width: 180px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-bar input::placeholder {
+            color: var(--ink-muted);
+            font-style: italic;
+        }
+
+        /* ========== EDITORIAL MASTHEAD ========== */
+        .masthead {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper-warm);
+            padding: var(--space-2xl) 0 var(--space-xl);
+        }
+
+        .masthead-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .masthead h1 {
+            font-size: 3.2rem;
+            max-width: 780px;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+
+        .masthead .deck {
+            font-size: 1.15rem;
+            color: var(--ink-soft);
+            max-width: 620px;
+            line-height: 1.65;
+            font-style: italic;
+        }
+
+        .masthead-meta {
+            margin-top: var(--space-xl);
+            display: flex;
+            gap: var(--space-xl);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-muted);
+        }
+
+        /* ========== CATEGORY STRIP ========== */
+        .category-strip {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper);
+            padding: var(--space-md) 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-strip::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-strip-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .cat-btn {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            background: none;
+            border: 1px solid var(--rule);
+            padding: 0.4rem 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .cat-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .cat-btn.active {
+            background: var(--ink);
+            color: var(--paper);
+            border-color: var(--ink);
+        }
+
+        /* ========== MAIN CONTENT GRID ========== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: var(--space-2xl);
+            padding: var(--space-2xl) 0;
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding-left: var(--space-xl);
+            padding-right: var(--space-xl);
+        }
+
+        /* ========== FEATURED ARTICLE ========== */
+        .featured-article {
+            margin-bottom: var(--space-2xl);
+            padding-bottom: var(--space-2xl);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .featured-article-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            margin-bottom: var(--space-lg);
+            background: var(--paper-warm);
+        }
+
+        .featured-article h2 {
+            font-size: 2.1rem;
+            margin-bottom: var(--space-md);
+            max-width: 680px;
+        }
+
+        .featured-article .excerpt {
+            max-width: 620px;
+        }
+
+        .featured-article .article-meta {
+            margin-top: var(--space-md);
+        }
+
+        /* ========== ARTICLE CARDS ========== */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .article-card {
+            padding: var(--space-xl) 0;
+            border-bottom: 1px solid var(--rule-light);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+
+        .article-card:first-child {
+            padding-top: 0;
+        }
+
+        .article-card:last-child {
+            border-bottom: none;
+        }
+
+        .article-card h3 {
+            font-size: 1.35rem;
+            line-height: 1.3;
+            margin-bottom: var(--space-sm);
+        }
+
+        .article-card h3 a:hover {
+            color: var(--accent);
+        }
+
+        .article-card .excerpt {
+            font-size: 0.95rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-card .article-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-top: var(--space-sm);
+        }
+
+        .article-card--with-image {
+            grid-template-columns: 200px 1fr;
+            gap: var(--space-lg);
+            align-items: start;
+        }
+
+        .article-card--with-image .card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: var(--paper-warm);
+        }
+
+        .article-card--with-image .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .sidebar-block {
+            border-top: 2px solid var(--ink);
+            padding-top: var(--space-lg);
+        }
+
+        .sidebar-block h3 {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: var(--space-lg);
+            color: var(--ink);
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-list a {
+            font-family: var(--font-serif);
+            font-size: 0.92rem;
+            line-height: 1.45;
+            display: block;
+        }
+
+        .sidebar-list .sidebar-meta {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            color: var(--ink-muted);
+            margin-top: 0.25rem;
+            letter-spacing: 0.03em;
+        }
+
+        .sidebar-about {
+            background: var(--paper-warm);
+            padding: var(--space-lg);
+            border: none;
+        }
+
+        .sidebar-about p {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .sidebar-about .author-name {
+            font-style: normal;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: var(--space-sm);
+            display: block;
+        }
+
+        /* ========== POPULAR SECTION ========== */
+        .section-heading {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            padding-bottom: var(--space-md);
+            border-bottom: 2px solid var(--ink);
+            margin-bottom: var(--space-xl);
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .popular-card h3 {
+            font-size: 1.1rem;
+            line-height: 1.35;
+            margin-bottom: var(--space-xs);
+        }
+
+        .popular-card .label-category {
+            margin-bottom: var(--space-xs);
+        }
+
+        /* ========== IMAGES IN ARTICLES ========== */
+        .article-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            margin: var(--space-xl) 0;
+            background: var(--paper-warm);
+        }
+
+        .article-image--portrait {
+            aspect-ratio: 3/4;
+            max-width: 500px;
+        }
+
+        /* ========== FAQ ========== */
+        .faq-section {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+            border-top: 1px solid var(--rule);
+        }
+
+        .faq-list {
+            max-width: var(--max-article);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: var(--space-lg) 0;
+            text-align: left;
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            color: var(--ink);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: var(--space-md);
+            line-height: 1.4;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-question .faq-icon {
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            color: var(--ink-muted);
+            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 600px;
+            padding-bottom: var(--space-lg);
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            line-height: 1.7;
+            max-width: 620px;
+        }
+
+        /* ========== NEWSLETTER ========== */
+        .newsletter-section {
+            background: var(--ink);
+            color: var(--paper);
+            padding: var(--space-3xl) 0;
+        }
+
+        .newsletter-inner {
+            max-width: var(--max-article);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+            text-align: center;
+        }
+
+        .newsletter-inner h2 {
+            font-size: 2rem;
+            color: var(--paper);
+            margin-bottom: var(--space-md);
+        }
+
+        .newsletter-inner p {
+            font-size: 1rem;
+            color: #b5aeaa;
+            max-width: 480px;
+            margin: 0 auto var(--space-xl);
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            padding: 0.7rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: var(--paper);
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #8a8480;
+            font-style: italic;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent-soft);
+        }
+
+        .newsletter-form button {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.7rem 1.4rem;
+            background: var(--accent);
+            color: var(--paper);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-soft);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--paper-warm);
+            border-top: 1px solid var(--rule);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+            margin-top: var(--space-sm);
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--rule);
+            padding-top: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.03em;
+        }
+
+        /* ========== MODAL (About/Contact/Privacy/Terms) ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 24, 23, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 500;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-xl);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--paper);
+            max-width: 680px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: var(--space-2xl);
+            position: relative;
+            border: 1px solid var(--rule);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: none;
+            border: 1px solid var(--rule);
+            width: 32px;
+            height: 32px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--ink-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .modal-content h2 {
+            margin-bottom: var(--space-lg);
+            font-size: 1.8rem;
+        }
+
+        .modal-content h3 {
+            font-size: 1.1rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-sm);
+        }
+
+        .modal-content p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            margin-bottom: var(--space-md);
+            line-height: 1.7;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-xl);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .masthead h1 {
+                font-size: 2.2rem;
+            }
+
+            .masthead-meta {
+                flex-wrap: wrap;
+                gap: var(--space-md);
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                gap: var(--space-md);
+            }
+
+            .site-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding-top: var(--space-md);
+                border-top: 1px solid var(--rule);
+            }
+
+            .site-nav.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+
+            .article-card--with-image {
+                grid-template-columns: 1fr;
+            }
+
+            .popular-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--space-md);
+                text-align: center;
+            }
+
+            .featured-article h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .header-inner,
+            .masthead-inner,
+            .category-strip-inner,
+            .content-grid,
+            .faq-section,
+            .footer-inner {
+                padding-left: var(--space-md);
+                padding-right: var(--space-md);
+            }
+
+            .masthead h1 {
+                font-size: 1.8rem;
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+
+            .modal-content {
+                padding: var(--space-lg);
+            }
+        }
+
+        /* ========== UTILITY ========== */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: var(--space-2xl);
+            color: var(--ink-muted);
+            font-style: italic;
+        }
+
+        /* Category filter active state for article visibility */
+        .article-card.hidden,
+        .featured-article.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                <span class="brand-tagline">Design Journal</span>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">Menu</button>
+
+            <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+             <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MASTHEAD ========== -->
+    <section class="masthead">
+        <div class="masthead-inner">
+            <h1>Where thoughtful interiors meet considered architecture.</h1>
+            <p class="deck">Inspired Home Details is an independent editorial journal for people who care about the spaces they inhabit. We publish long-form articles, practical guides, and material knowledge for architects, designers, and discerning homeowners.</p>
+            <div class="masthead-meta">
+                <span>Established 2024</span>
+                <span>Independent Publication</span>
+                <span>Reader-Supported</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORY STRIP ========== -->
+    <div class="category-strip" role="navigation" aria-label="Article categories">
+        <div class="category-strip-inner">
+            <button class="cat-btn active" data-category="all" onclick="setCategory('all', this)">All</button>
+            <button class="cat-btn" data-category="interior-design" onclick="setCategory('interior-design', this)">Interior Design</button>
+            <button class="cat-btn" data-category="architecture" onclick="setCategory('architecture', this)">Architecture</button>
+            <button class="cat-btn" data-category="home-design" onclick="setCategory('home-design', this)">Home Design</button>
+            <button class="cat-btn" data-category="materials" onclick="setCategory('materials', this)">Materials</button>
+            <button class="cat-btn" data-category="space-planning" onclick="setCategory('space-planning', this)">Space Planning</button>
+            <button class="cat-btn" data-category="lighting" onclick="setCategory('lighting', this)">Lighting</button>
+            <button class="cat-btn" data-category="furniture" onclick="setCategory('furniture', this)">Furniture</button>
+            <button class="cat-btn" data-category="modern-homes" onclick="setCategory('modern-homes', this)">Modern Homes</button>
+        </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="content-grid">
+        <!-- Main column -->
+        <main role="main">
+
+            <!-- Featured Article -->
+            <article class="featured-article" data-category="interior-design space-planning" id="featured">
+                <img class="featured-article-image" 
+                     src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=450&fit=crop" 
+                     alt="A light-filled living room with a large sofa, natural wood floors, and carefully placed lighting that creates distinct zones for reading and conversation.">
+                <span class="label-category">Space Planning</span>
+                <h2>The Anatomy of a Well-Planned Living Room: Beyond the Sofa and Coffee Table</h2>
+                <p class="excerpt">Most living rooms fail not because of poor taste, but because of poor planning. We break down the three invisible systems—circulation, sightlines, and anchoring—that separate rooms that merely look good from rooms that actually work.</p>
+                <div class="article-meta meta">
+                    <span>Elena Marchetti</span>
+                    <span>18 min read</span>
+                    <span>March 2026</span>
+                </div>
+            </article>
+
+            <!-- Article List -->
+            <section id="articles" aria-label="Latest articles">
+                <div class="section-heading">Latest Articles</div>
+
+                <div class="article-list" id="articleList">
+
+                    <!-- Article 1 -->
+                    <article class="article-card" data-category="lighting architecture">
+                        <span class="label-category label-category--slate">Lighting</span>
+                        <h3><a href="#" onclick="openModal('articleLight')">How Light Shapes the Experience of a Home: A Practical Guide to Layered Illumination</a></h3>
+                        <p class="excerpt">Lighting is not a fixture selection problem. It is a spatial experience problem. This guide explains the four layers of residential lighting—ambient, task, accent, and decorative—and how to balance them room by room without hiring a lighting designer.</p>
+                        <div class="article-meta meta">
+                            <span>David Chen</span>
+                            <span>14 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 with image -->
+                    <article class="article-card article-card--with-image" data-category="materials architecture">
+                        <img class="card-image" 
+                             src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=400&h=300&fit=crop" 
+                             alt="Close-up of a brushed oak cabinet door and a matte concrete wall meeting at a precise shadow gap detail.">
+                        <div class="card-body">
+                            <span class="label-category">Materials</span>
+                            <h3><a href="#" onclick="openModal('articleMaterial')">Material Honesty: Why Natural Finishes Outlast Trends</a></h3>
+                            <p class="excerpt">Oak that ages. Brass that patinas. Stone that shows its history. The most enduring interiors are not the most protected—they are the most honestly detailed. A case for specifying materials that improve with time rather than disguise it.</p>
+                            <div class="article-meta meta">
+                                <span>Sarah Whitfield</span>
+                                <span>11 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card" data-category="home-design small-spaces">
+                        <span class="label-category label-category--sage">Home Design</span>
+                        <h3><a href="#" onclick="openModal('articleSmall')">Small Space, Large Life: Strategies for Living Well Under 60 Square Meters</a></h3>
+                        <p class="excerpt">The tiny apartment is not a compromise—it is a constraint that, when understood properly, produces some of the most inventive residential design. We examine built-in storage, multi-functional furniture, and the critical importance of visual breathing room.</p>
+                        <div class="article-meta meta">
+                            <span>Marco Rivera</span>
+                            <span>16 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="article-card" data-category="interior-design home-design">
+                        <span class="label-category">Interior Design</span>
+                        <h3><a href="#" onclick="openModal('articleColor')">Beyond the Color Wheel: How to Choose Wall Colors That Actually Work in Your Light</a></h3>
+                        <p class="excerpt">The paint chip lied to you. It looked perfect in the store, perfect on Pinterest, and slightly wrong on your wall. Here is why undertones, exposure, and fixed finishes matter more than the color name itself.</p>
+                        <div class="article-meta meta">
+                            <span>Elena Marchetti</span>
+                            <span>12 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="article-card" data-category="architecture modern-homes">
+                        <span class="label-category label-category--slate">Architecture</span>
+                        <h3><a href="#" onclick="openModal('articleFacade')">The Quiet Facade: Why Restraint Is the Most Difficult Architectural Move</a></h3>
+                        <p class="excerpt">Anyone can make a building shout. Making one that speaks softly and still holds presence is far harder. A study of residential facades that use proportion, material, and shadow rather than decoration to achieve permanence.</p>
+                        <div class="article-meta meta">
+                            <span>James Okafor</span>
+                            <span>13 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="article-card" data-category="space-planning home-design">
+                        <span class="label-category label-category--sage">Space Planning</span>
+                        <h3><a href="#" onclick="openModal('articleFlow')">The Unseen Architecture of Flow: Circulation Patterns in Residential Design</a></h3>
+                        <p class="excerpt">Good circulation is invisible. Bad circulation is the reason you walk through the dining table to reach the kitchen. We explain the fundamental principles of residential flow and how to diagnose problems in existing floor plans.</p>
+                        <div class="article-meta meta">
+                            <span>David Chen</span>
+                            <span>15 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 7 -->
+                    <article class="article-card" data-category="furniture interior-design">
+                        <span class="label-category">Furniture</span>
+                        <h3><a href="#" onclick="openModal('articleFurniture')">The Case Against the Matching Set: Furniture Composition for Real Rooms</a></h3>
+                        <p class="excerpt">A room furnished from a single catalog is a room without a point of view. We explore how to mix periods, materials, and scales to create interiors that feel collected rather than purchased—without descending into chaos.</p>
+                        <div class="article-meta meta">
+                            <span>Sarah Whitfield</span>
+                            <span>10 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 8 -->
+                    <article class="article-card" data-category="materials architecture">
+                        <span class="label-category label-category--slate">Materials</span>
+                        <h3><a href="#" onclick="openModal('articleSustainable')">Sustainable Doesn't Have to Look Like It: High-Performance Materials in Conventional Aesthetics</a></h3>
+                        <p class="excerpt">The most sustainable building material is the one you don't notice. A look at how reclaimed timber, low-carbon concrete, and high-performance glazing can be specified without sacrificing the visual language of a traditional home.</p>
+                        <div class="article-meta meta">
+                            <span>James Okafor</span>
+                            <span>17 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 9 -->
+                    <article class="article-card" data-category="lighting architecture">
+                        <span class="label-category label-category--slate">Lighting</span>
+                        <h3><a href="#" onclick="openModal('articleDaylight')">Daylight Is a Material: Designing with Sun Rather Than Against It</a></h3>
+                        <p class="excerpt">Before the first light fixture is specified, the building has already been designed by the sun. Orientation, window size, and shading strategy determine whether a room is a delight or a fight. We explain the fundamentals of passive daylighting.</p>
+                        <div class="article-meta meta">
+                            <span>Marco Rivera</span>
+                            <span>14 min read</span>
+                        </div>
+                    </article>
+
+                    <!-- Article 10 -->
+                    <article class="article-card" data-category="home-design interior-design">
+                        <span class="label-category label-category--sage">Home Design</span>
+                        <h3><a href="#" onclick="openModal('articleKitchen')">The Working Kitchen: Layout Principles That Outlast Appliance Trends</a></h3>
+                        <p class="excerpt">Appliances change. The distance between the sink, the stove, and the refrigerator does not. A practical guide to kitchen work triangles, landing zones, and the ergonomics that make a kitchen useful for decades rather than showroom-ready for a season.</p>
+                        <div class="article-meta meta">
+                            <span>Elena Marchetti</span>
+                            <span>16 min read</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div id="noResults" class="no-results" style="display:none;">
+                    No articles match your search. Try a different term or select another category.
+                </div>
+            </section>
+
+            <!-- Popular Articles -->
+            <section id="popular" style="margin-top: var(--space-2xl); padding-top: var(--space-xl); border-top: 1px solid var(--rule);" aria-label="Popular articles">
+                <div class="section-heading">Most Read This Month</div>
+                <div class="popular-grid">
+                    <div class="popular-card">
+                        <span class="label-category label-category--slate">Lighting</span>
+                        <h3><a href="#" onclick="openModal('articleLight')">How Light Shapes the Experience of a Home</a></h3>
+                        <p class="meta">David Chen · 14 min read</p>
+                    </div>
+                    <div class="popular-card">
+                        <span class="label-category">Space Planning</span>
+                        <h3><a href="#" onclick="openModal('articleFlow')">The Unseen Architecture of Flow</a></h3>
+                        <p class="meta">David Chen · 15 min read</p>
+                    </div>
+                    <div class="popular-card">
+                        <span class="label-category label-category--sage">Home Design</span>
+                        <h3><a href="#" onclick="openModal('articleSmall')">Small Space, Large Life</a></h3>
+                        <p class="meta">Marco Rivera · 16 min read</p>
+                    </div>
+                    <div class="popular-card">
+                        <span class="label-category">Materials</span>
+                        <h3><a href="#" onclick="openModal('articleMaterial')">Material Honesty: Why Natural Finishes Outlast Trends</a></h3>
+                        <p class="meta">Sarah Whitfield · 11 min read</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" role="complementary">
+
+            <div class="sidebar-block">
+                <h3>Editor's Picks</h3>
+                <ul class="sidebar-list">
+                    <li>
+                        <a href="#" onclick="openModal('articleFacade')">The Quiet Facade: Why Restraint Is the Most Difficult Architectural Move</a>
+                        <div class="sidebar-meta">James Okafor · 13 min read</div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="openModal('articleDaylight')">Daylight Is a Material: Designing with Sun Rather Than Against It</a>
+                        <div class="sidebar-meta">Marco Rivera · 14 min read</div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="openModal('articleFurniture')">The Case Against the Matching Set</a>
+                        <div class="sidebar-meta">Sarah Whitfield · 10 min read</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-block sidebar-about">
+                <span class="author-name">About This Journal</span>
+                <p>Inspired Home Details is written by a small editorial team of architects, interior designers, and design journalists. We publish what we wish existed: practical, non-commercial knowledge about residential design. No sponsored content. No trend-chasing. Just the things that actually matter.</p>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Browse by Category</h3>
+                <ul class="sidebar-list">
+                    <li><a href="#" onclick="setCategory('interior-design')">Interior Design</a></li>
+                    <li><a href="#" onclick="setCategory('architecture')">Architecture</a></li>
+                    <li><a href="#" onclick="setCategory('space-planning')">Space Planning</a></li>
+                    <li><a href="#" onclick="setCategory('materials')">Materials</a></li>
+                    <li><a href="#" onclick="setCategory('lighting')">Lighting</a></li>
+                    <li><a href="#" onclick="setCategory('home-design')">Home Design</a></li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+        <div class="section-heading">Common Questions</div>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    What is the difference between interior design and interior decoration?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Interior design involves the planning and construction of interior spaces—altering walls, specifying built-in elements, coordinating structural changes, and addressing how a space functions at the architectural level. Interior decoration, by contrast, concerns the selection and arrangement of finishes, furniture, and accessories within an existing spatial framework. A designer may do both, but the distinction matters when you are deciding who to hire for a renovation versus a refresh.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    How do I know if my floor plan has circulation problems?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Three signs: you find yourself walking through one activity zone to reach another (through the dining table to get to the kitchen), doors open into each other or into furniture, and there is no clear path between primary functions without weaving. Good circulation should be intuitive and near-invisible. If you have to think about how to move through a room, the plan needs revision.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    What is the most important layer of lighting in a home?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ambient lighting provides the baseline—general illumination that makes a room usable. Task lighting makes specific activities possible (reading, cooking, working). Accent lighting creates hierarchy and depth. The most important layer depends on the room: kitchens live on task lighting; living rooms depend on accent and ambient balance. The mistake is relying on a single overhead fixture for all three.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    Is it worth hiring an architect for a residential renovation?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>If the renovation involves structural changes, significant spatial reconfiguration, or regulatory approvals, an architect's involvement typically pays for itself in avoided mistakes and optimized outcomes. For cosmetic updates or furniture-level changes, a designer or skilled contractor may be sufficient. The threshold is usually: if walls are moving, you need an architect.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    How do I choose materials that will age well?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Prioritize materials that develop character rather than degrade: solid timber over veneer, stone over laminate, brass and bronze over coated metals, lime plaster over acrylic paint. The test is not how it looks on installation day but how it looks after five years of use. Natural materials with visible grain, patina, and imperfection generally age more gracefully than synthetic materials engineered to look pristine indefinitely.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter-section" aria-label="Newsletter signup">
+        <div class="newsletter-inner">
+            <h2>The Weekly Detail</h2>
+            <p>One carefully considered article, one practical design insight, delivered every Sunday. No promotions, no clickbait, no noise.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('button').style.background='#6b7b6e'; this.querySelector('input').value='';">
+                <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                    <p>An independent editorial journal covering residential architecture, interior design, and the practical knowledge of making good spaces. Published from the conviction that design writing should be useful, not merely aspirational.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Articles</h4>
+                    <ul>
+                        <li><a href="#articles">Interior Design</a></li>
+                        <li><a href="#articles">Architecture</a></li>
+                        <li><a href="#articles">Space Planning</a></li>
+                        <li><a href="#articles">Materials</a></li>
+                        <li><a href="#articles">Lighting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('about')">About</a></li>
+                        <li><a href="#" onclick="openModal('contact')">Contact</a></li>
+                        <li><a href="#" onclick="openModal('privacy')">Privacy Policy</a></li>
+                        <li><a href="#" onclick="openModal('terms')">Terms of Use</a></li>
+                        <li><a href="#" onclick="openModal('cookies')">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#" rel="noopener">Newsletter</a></li>
+                        <li><a href="#" rel="noopener">RSS Feed</a></li>
+                        <li><a href="#" rel="noopener">Instagram</a></li>
+                        <li><a href="#" rel="noopener">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Inspired Home Details. All rights reserved.</span>
+                <span>Independent editorial publication. No sponsored content.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== MODALS ========== -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // ========== NAVIGATION ==========
+        function toggleNav() {
+            document.getElementById('siteNav').classList.toggle('open');
+        }
+
+        // ========== CATEGORY FILTERING ==========
+        let activeCategory = 'all';
+
+        function setCategory(category, btn) {
+            activeCategory = category;
+
+            // Update button states
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) {
+                btn.classList.add('active');
+            } else {
+                // Find and activate the matching button (for sidebar links)
+                document.querySelectorAll('.cat-btn').forEach(b => {
+                    if (b.dataset.category === category) b.classList.add('active');
+                });
+            }
+
+            // Filter articles
+            filterArticles();
+
+            // Scroll to articles section
+            document.getElementById('articles').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function filterArticles() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            const articles = document.querySelectorAll('.article-card');
+            const featured = document.querySelector('.featured-article');
+            let visibleCount = 0;
+
+            // Check featured article
+            if (featured) {
+                const featCat = featured.dataset.category || '';
+                const featText = featured.textContent.toLowerCase();
+                const featMatch = (activeCategory === 'all' || featCat.includes(activeCategory)) &&
+                                  (searchTerm === '' || featText.includes(searchTerm));
+                if (featMatch) {
+                    featured.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    featured.classList.add('hidden');
+                }
+            }
+
+            // Filter article cards
+            articles.forEach(article => {
+                const cat = article.dataset.category || '';
+                const text = article.textContent.toLowerCase();
+                const categoryMatch = (activeCategory === 'all' || cat.includes(activeCategory));
+                const searchMatch = (searchTerm === '' || text.includes(searchTerm));
+
+                if (categoryMatch && searchMatch) {
+                    article.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    article.classList.add('hidden');
+                }
+            });
+
+            // Show/hide no results
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        // ========== FAQ TOGGLE ==========
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // ========== MODAL SYSTEM ==========
+        const modalContent = {
+            about: `
+                <h2>About Inspired Home Details</h2>
+                <p>Inspired Home Details is an independent editorial publication focused on residential architecture and interior design. We exist for a specific reason: most design writing online is either thinly veiled advertising or superficial trend reporting. Neither helps anyone make better decisions about the spaces they live in.</p>
+                <p>Our editorial team is composed of practicing architects, interior designers, and design journalists who write about the subjects they encounter in their work. We publish long-form articles, practical guides, and material knowledge—the kind of information that takes time to acquire and is rarely written down.</p>
+                <h3>Editorial Independence</h3>
+                <p>We do not accept sponsored content, paid placements, or affiliate commissions. When we mention products or materials, it is because they are relevant to the subject at hand, not because someone paid for the mention. Our only revenue comes from reader support and the occasional freelance commission, both of which are kept strictly separate from editorial.</p>
+                <h3>Who We Write For</h3>
+                <p>Our readers include homeowners planning a renovation, architects looking for a well-argued position on a design question, interior designers interested in how their peers approach problems, and anyone who wants to understand why some spaces feel right and others don't. If you care about the built environment at the domestic scale, this journal is for you.</p>
+            `,
+            contact: `
+                <h2>Contact</h2>
+                <p>We welcome correspondence from readers, designers, and architects. Whether you have a question about an article, a correction to offer, or a subject you think we should cover, we read every message.</p>
+                <h3>Editorial</h3>
+                <p>For article submissions, corrections, or editorial inquiries: <strong>editorial@inspiredhomedetails.com</strong></p>
+                <h3>General</h3>
+                <p>For all other matters: <strong>hello@inspiredhomedetails.com</strong></p>
+                <h3>Response Time</h3>
+                <p>We typically respond within three to five business days. We are a small team, and we prioritize substantive correspondence over volume.</p>
+                <p style="margin-top: 1.5rem; font-style: italic; color: var(--ink-muted);">We do not accept guest posts, link insertions, or sponsored article proposals. Please do not send them.</p>
+            `,
+            privacy: `
+                <h2>Privacy Policy</h2>
+                <p>Last updated: January 2026</p>
+                <h3>What We Collect</h3>
+                <p>When you subscribe to our newsletter, we collect your email address. We do not collect names, addresses, or payment information. We use privacy-respecting analytics that do not track individual readers across the web.</p>
+                <h3>How We Use It</h3>
+                <p>Your email address is used solely to deliver the newsletter you requested. We do not sell, rent, or share subscriber information with third parties. You can unsubscribe at any time via the link in every newsletter.</p>
+                <h3>Cookies</h3>
+                <p>We use minimal functional cookies necessary for the site to operate. We do not use advertising cookies or third-party tracking cookies. See our Cookie Policy for details.</p>
+                <h3>Third-Party Services</h3>
+                <p>Our newsletter delivery is handled by a privacy-focused email service provider. Analytics are processed by a service that does not share data with advertisers.</p>
+                <h3>Your Rights</h3>
+                <p>You may request access to, correction of, or deletion of any personal data we hold about you by contacting us. Since we only hold email addresses for newsletter subscribers, this is typically a straightforward request.</p>
+            `,
+            terms: `
+                <h2>Terms of Use</h2>
+                <p>Last updated: January 2026</p>
+                <h3>Content Ownership</h3>
+                <p>All articles, guides, and editorial content published on Inspired Home Details are the property of the publication and its contributors. You may quote short excerpts with attribution and a link to the original article. Republishing full articles without permission is not permitted.</p>
+                <h3>Accuracy</h3>
+                <p>We make every effort to ensure the technical accuracy of our articles, particularly those concerning building practices, materials, and regulations. However, building codes and best practices vary by jurisdiction. Always consult a qualified local professional before making construction or renovation decisions based on information from this or any other publication.</p>
+                <h3>Limitation of Liability</h3>
+                <p>Inspired Home Details provides information for educational purposes. We are not liable for decisions made based on our content. Design and construction involve professional judgment that cannot be replaced by reading articles.</p>
+                <h3>External Links</h3>
+                <p>We link to external sources when they are relevant and useful. We are not responsible for the content, accuracy, or privacy practices of those sites.</p>
+                <h3>Changes to These Terms</h3>
+                <p>We may update these terms occasionally. Continued use of the site after changes constitutes acceptance of the updated terms.</p>
+            `,
+            cookies: `
+                <h2>Cookie Policy</h2>
+                <p>Last updated: January 2026</p>
+                <h3>What Are Cookies</h3>
+                <p>Cookies are small text files stored on your device by your browser. They are used to remember preferences and enable certain site functions.</p>
+                <h3>How We Use Cookies</h3>
+                <p>Inspired Home Details uses only essential cookies required for the site to function properly. These may include session cookies that maintain your preferences during a visit and remember whether you have closed certain notifications.</p>
+                <h3>What We Do Not Use</h3>
+                <p>We do not use advertising cookies, tracking pixels, social media cookies, or any third-party cookies designed to build a profile of your browsing activity. We do not participate in behavioral advertising networks.</p>
+                <h3>Managing Cookies</h3>
+                <p>You can disable cookies in your browser settings. Because we use so few cookies, disabling them should not significantly affect your experience on this site. Your browser's help documentation provides instructions for managing cookie preferences.</p>
+            `,
+            articleLight: `
+                <h2>How Light Shapes the Experience of a Home: A Practical Guide to Layered Illumination</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">David Chen · 14 min read · Lighting</p>
+                <p>Lighting is the element of interior design that most people understand least and feel most keenly. A room can contain beautiful furniture, well-chosen materials, and a perfectly considered layout, and still feel wrong—because the light is wrong. Conversely, a modest room with nothing particularly special about its finishes can feel extraordinary if the light is handled with intelligence.</p>
+                <p>The problem is that most residential lighting decisions are made at the wrong moment. They are made when the electrician asks where you want the ceiling lights, or when you are standing in a showroom trying to choose between two fixtures that look nearly identical. By then, the most important decisions have already been made—or avoided.</p>
+                <p>This guide is about making those decisions deliberately. It explains the four layers of residential lighting, how they interact, and how to apply them room by room without needing to hire a specialist.</p>
+                <h3>The Four Layers</h3>
+                <p><strong>Ambient lighting</strong> provides the baseline illumination that makes a room usable. It is the light that fills the space without drawing attention to itself. In most homes, ambient light comes from ceiling fixtures—but this is also where most lighting problems begin. A single central fixture throws light in one direction, creating bright spots and dark corners. Ambient light is better distributed: recessed fixtures placed at the perimeter of a room, wall sconces that wash the ceiling, or a combination of sources working together.</p>
+                <p><strong>Task lighting</strong> is the most practical layer. It illuminates the specific areas where activities happen: the counter where you chop vegetables, the desk where you read, the bathroom mirror where you shave or apply makeup. Task lighting should be positioned between your eyes and the work surface, and it should be bright enough to do the job without glare. Under-cabinet lighting in kitchens, adjustable desk lamps, and dedicated reading lights are all task lighting.</p>
+                <p><strong>Accent lighting</strong> creates hierarchy and depth. It is the light that draws attention to a painting, a textured wall, a plant, or an architectural detail. Accent lighting is what makes a room feel designed rather than merely lit. It can be as simple as a picture light or as deliberate as a recessed spot aimed at a specific surface. The key is selectivity: accent lighting works because it highlights some things and allows others to fall into shadow.</p>
+                <p><strong>Decorative lighting</strong> is the fixture as object. A pendant over a dining table, a chandelier in an entry, a floor lamp with a beautiful shade—these serve functional purposes but are chosen primarily for their visual presence. Decorative lighting should be the last layer added, not the first, because it is easier to find a fixture that suits a well-lit room than to light a room around a fixture you fell in love with.</p>
+                <h3>Applying the Layers</h3>
+                <p>In a living room, ambient light might come from recessed fixtures at the perimeter, task light from a floor lamp beside a reading chair, accent light from a picture light or a pair of spots aimed at a bookshelf, and decorative light from a table lamp with a textured ceramic base. None of these layers is expensive. None is complicated. But together they create a room that can shift from bright and social to dim and intimate with the turn of a few dimmers.</p>
+                <p>In a kitchen, the balance shifts toward task lighting. Under-cabinet lights illuminate the counter. A pendant or two over an island provides both task light and decorative presence. Ambient light is less critical because the task lighting does most of the work, but a dimmable overhead source is useful for cleaning and for evenings when the kitchen is used as a social space rather than a workspace.</p>
+                <p>The most common mistake is relying on a single layer. A room with only ambient light feels flat and institutional. A room with only accent light feels dramatic but unusable. The richness of a well-lit home comes from the interplay of layers—and from the ability to control them independently.</p>
+                <h3>Color Temperature</h3>
+                <p>Light color matters as much as light quantity. Warm light (2700K–3000K) is appropriate for living spaces, bedrooms, and anywhere you want to feel relaxed. Cooler light (3500K–4000K) is better for task areas, particularly kitchens and workspaces, because it improves visual acuity. Mixing color temperatures in the same room is usually a mistake—it makes the space feel disjointed. Choose one temperature for the ambient and decorative layers, and a slightly cooler one for task lighting if needed.</p>
+                <h3>Dimmers and Control</h3>
+                <p>Every light in a residential space should be on a dimmer. This is not a luxury; it is the single most effective thing you can do to improve the quality of your lighting. A room with dimmable layers can adapt to every mood and activity. A room with fixed-brightness fixtures is stuck at one setting forever. The cost of dimmers is modest, and the difference they make is transformative.</p>
+                <p>Beyond dimmers, consider separating your lighting into distinct circuits. A single switch that turns on every light in a room is convenient but inflexible. Separate switches for ambient, task, and accent layers give you the control to create different scenes—bright for cleaning, medium for dinner, dim for conversation, and a single accent for atmosphere.</p>
+            `,
+            articleMaterial: `
+                <h2>Material Honesty: Why Natural Finishes Outlast Trends</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Sarah Whitfield · 11 min read · Materials</p>
+                <p>The most enduring interiors are not the most protected. They are the most honestly detailed. This is a counterintuitive idea in a culture that associates quality with flawlessness and durability with resistance to change. But walk into a room that has been designed around materials that age—oak that darkens, brass that patinas, stone that accumulates the evidence of use—and you will feel something that no amount of protective coating can replicate: the sense that the space is alive, that it has a past and a future, and that you are part of its ongoing story.</p>
+                <h3>The Case Against Pristine</h3>
+                <p>Synthetic materials are engineered to remain unchanged. Laminate flooring is designed to resist scratches, stains, and wear. Vinyl siding is designed to hold its color indefinitely. Acrylic paint is designed to go on evenly and stay that way. These are not bad qualities in themselves—there are contexts where durability and ease of maintenance are the right priorities.</p>
+                <p>But when pristine becomes the default expectation for every surface in a home, something is lost. A room where nothing is allowed to show age is a room that cannot absorb life. Every scratch becomes a flaw. Every patina becomes a defect. The occupants are placed in a position of constant vigilance, protecting the surfaces from the very activities that make a house a home.</p>
+                <h3>What Natural Materials Do</h3>
+                <p>Natural materials behave differently. Solid timber floors develop a patina that comes from years of foot traffic, sunlight, and cleaning. The grain deepens. The color warms. The surface develops a soft sheen that no factory finish can imitate. A brass tap or door handle begins bright and gradually acquires a darker, more complex tone as it oxidizes. Stone counters show the faint etchings of everyday use—a ring from a wine glass, a slight dulling where a knife was dropped. These are not defects. They are records.</p>
+                <p>This is what we mean by material honesty: specifying materials that are what they appear to be, and that will continue to be what they appear to be as they age. A solid oak floor is honest. An engineered board printed with a photograph of oak is not—it will not age like oak, and when it wears through, it will reveal itself as something else entirely.</p>
+                <h3>Specifying for Age</h3>
+                <p>Choosing materials that age well is not about nostalgia or rejecting modern products. It is about making a deliberate decision about how you want your home to change over time. Some practical guidance:</p>
+                <p><strong>Prioritize solid over veneered</strong> where wear is likely. Solid timber on floors, stairs, and furniture that gets daily use. Veneer is appropriate for surfaces that are protected from wear, such as cabinet fronts in a low-traffic area or wall panels above waist height.</p>
+                <p><strong>Choose living finishes over lacquered ones</strong> for metals. Unlacquered brass and bronze develop a patina. Lacquered brass stays bright until the coating wears through, at which point it looks patchy and tired. The patina of unlacquered metal is the point, not a problem to be solved.</p>
+                <p><strong>Accept that stone will stain</strong>—and choose stones whose appearance is improved by it. Honed or leathered finishes are more forgiving than polished. Darker stones hide more than light ones. But the real answer is to treat staining as evidence of use, not failure. A kitchen counter that shows the marks of cooking is a kitchen that has been used for cooking.</p>
+                <p><strong>Use lime plaster rather than acrylic paint</strong> where you want a surface that feels alive. Lime plaster has depth and variation that flat paint cannot achieve. It breathes. It develops a subtle sheen with age. It is more expensive and more difficult to apply, but the result is a wall that feels like a material rather than a coating.</p>
+                <h3>The Long View</h3>
+                <p>The argument for material honesty is not primarily aesthetic, though the aesthetics are significant. It is a question of how you want to live. A home filled with materials that improve with age asks less of its occupants. You can relax. You can stop worrying about the first scratch or the first stain. The house will absorb it, and in absorbing it, will become more yours.</p>
+            `,
+            articleSmall: `
+                <h2>Small Space, Large Life: Strategies for Living Well Under 60 Square Meters</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Marco Rivera · 16 min read · Home Design</p>
+                <p>The small apartment is not a compromise. It is a constraint that, when understood properly, produces some of the most inventive residential design. The history of domestic architecture is full of examples: the traditional Japanese machiya, the Parisian chambre de bonne, the mid-century studio apartment. Each of these typologies developed specific strategies for making limited space feel generous. Those strategies remain relevant today, not because we have less space than previous generations—though in many cities we do—but because thinking carefully about space is a habit that pays dividends regardless of how much of it you have.</p>
+                <h3>The First Principle: Visual Breathing Room</h3>
+                <p>The most common mistake in small-space design is trying to fit too much in. A small room filled with furniture, accessories, and storage is still a small room—it is just a small room that feels crowded. The goal is not maximum capacity. It is a balance between function and openness.</p>
+                <p>Visual breathing room is created by leaving surfaces empty. Not every wall needs something on it. Not every corner needs a piece of furniture. The empty space is not wasted space; it is the space that allows the room to feel larger than its dimensions. A single well-placed chair in an empty corner reads as intentional. The same chair surrounded by a side table, a floor lamp, a stack of books, and a plant reads as clutter.</p>
+                <h3>Built-In Storage</h3>
+                <p>In a small space, storage should be built in wherever possible. Freestanding furniture occupies floor area whether or not it is being used. Built-in storage occupies wall area, which is less visually disruptive and more efficient. Floor-to-ceiling wardrobes, under-stair drawers, window seats with storage beneath—these are not just space-saving devices. They are design opportunities that can make a small apartment feel considered and intentional.</p>
+                <p>The key is to make built-in storage look like architecture rather than cabinetry. When storage is integrated into the walls—flush fronts, no visible handles, matching the wall color—it recedes. When it looks like a wardrobe that happens to be built in, it competes with the space.</p>
+                <h3>Multi-Functional Furniture</h3>
+                <p>The sofa bed is the cliché of small-space living, but it is a cliché for a reason. Furniture that serves more than one purpose allows a single room to support multiple activities. A dining table that folds down from the wall. A coffee table that raises to become a desk. A bed with storage drawers underneath. These are not compromises; they are solutions that acknowledge that small spaces require furniture to work harder.</p>
+                <p>But multi-functional furniture should not be used as an excuse to fill the room with transformers. A table that converts from dining to desk to coffee table is clever, but if it is heavy and awkward to operate, it will stay in one configuration and the other functions will be lost. Simplicity of operation matters. The best multi-functional furniture is the kind you can adjust without thinking.</p>
+                <h3>Light and Sightlines</h3>
+                <p>Small spaces benefit disproportionately from good light. A room with abundant daylight feels larger than the same room with limited windows. Where windows are limited, lighting strategy becomes critical. Layered lighting—ambient, task, accent—prevents the flatness that comes from a single overhead source. And mirrors, used judiciously, can amplify the sense of space by reflecting light and extending sightlines.</p>
+                <p>Sightlines matter as much as light. A long view through a space makes it feel larger. If a doorway opens onto a wall, the space feels terminated. If it opens onto another room, or a window, the space feels extended. This is why open plans work in small apartments: they allow sightlines to travel, even if the total area is modest. Where walls are necessary, consider openings rather than full partitions—a doorway with no door, a half-wall, a glass panel.</p>
+                <h3>The Discipline of Editing</h3>
+                <p>Ultimately, small-space living requires discipline. It requires choosing less furniture, fewer objects, more empty surfaces. It requires a willingness to let go of things that do not earn their space. This is not deprivation. It is the recognition that a small, well-considered space is more valuable than a larger one filled with things you do not use or love.</p>
+            `,
+            articleColor: `
+                <h2>Beyond the Color Wheel: How to Choose Wall Colors That Actually Work in Your Light</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Elena Marchetti · 12 min read · Interior Design</p>
+                <p>The paint chip lied to you. It looked perfect in the store, perfect on Pinterest, and slightly wrong on your wall. This is not a failure of taste. It is a failure of information. Paint chips are viewed under lighting conditions that have nothing to do with the room where the paint will be applied. And even if the lighting matched, the color on a small chip behaves differently than the same color on four walls, where it reflects onto itself and shifts in tone.</p>
+                <p>Choosing wall colors that actually work requires understanding three variables: undertones, exposure, and fixed finishes.</p>
+                <h3>Undertones</h3>
+                <p>Every color contains undertones—secondary hues that are present but not immediately obvious. A "warm white" might have yellow or pink undertones. A "cool gray" might lean blue or green. These undertones determine how the color will behave in different lighting conditions.</p>
+                <p>The most common mistake in color selection is choosing a color based on its name rather than its undertone. A paint called "Greige" might have undertones that read cool and gray in a north-facing room, and warm and beige in a south-facing room. The name tells you nothing about how the color will actually look on your wall.</p>
+                <p>The practical solution is to test colors on your walls, not in the store. Paint large swatches—at least A3 size, preferably larger—and observe them at different times of day. Morning light, afternoon light, evening artificial light. The color that looks right at noon may look wrong at 7 PM. Choose a color that looks acceptable in all conditions, not perfect in one.</p>
+                <h3>Exposure</h3>
+                <p>The direction your room faces determines the quality of light it receives, and that determines how colors will appear. North-facing rooms receive cool, indirect light. Colors in these rooms tend to appear cooler and more muted than they would elsewhere. Warm colors—yellows, reds, oranges—can help counteract the coolness. Cool colors—blues, greens, grays—may feel chilly.</p>
+                <p>South-facing rooms receive warm, direct light for much of the day. Colors appear warmer and more saturated. Cool colors are usually safe here. Very warm colors can become overwhelming.</p>
+                <p>East-facing rooms have bright, warm morning light that shifts to cooler light in the afternoon. West-facing rooms have the opposite pattern. In both cases, colors may appear to change throughout the day, which makes testing in situ particularly important.</p>
+                <h3>Fixed Finishes</h3>
+                <p>Your wall color does not exist in isolation. It exists in relationship to your floors, your cabinetry, your countertops, your furniture, and your trim. These fixed finishes have their own undertones, and the wall color must work with them.</p>
+                <p>A common problem: you choose a white wall color that looks clean and neutral in the store, but it looks dirty next to your warm oak floors. Or you choose a gray that looked cool and sophisticated on the chip, but it looks blue next to your cream cabinets. The wall color is not wrong in itself. It is wrong in context.</p>
+                <p>The solution is to bring samples of your fixed finishes when you shop for paint. Even better, test paint colors alongside those finishes. A color that looks right on its own may look wrong next to your countertop. A color that seems unremarkable on its own may look perfect in context.</p>
+                <h3>Practical Guidance</h3>
+                <p>For rooms where you want a quiet, restful atmosphere—bedrooms, living rooms—choose colors that are low in saturation. Strong colors are exciting for a short time and tiring over a longer period. The rooms we live in most tend to benefit from muted tones that recede.</p>
+                <p>For rooms that are used briefly and for specific purposes—entry halls, powder rooms, dining rooms used for occasional entertaining—stronger colors can work. These are spaces where you want to make an impression, not create a background.</p>
+                <p>Ceilings should generally be lighter than walls, or the same color as the walls. A dark ceiling lowers the apparent height of a room and makes it feel enclosed. This can be effective in intimate spaces but is usually a mistake in rooms where you want a sense of openness.</p>
+                <p>Trim should be considered carefully. White trim is the default, but it is not always the best choice. In a room with warm wall colors, white trim can look stark and disconnected. Trim painted the same color as the walls, or a shade lighter or darker, can create a more cohesive and sophisticated look.</p>
+            `,
+            articleFacade: `
+                <h2>The Quiet Facade: Why Restraint Is the Most Difficult Architectural Move</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">James Okafor · 13 min read · Architecture</p>
+                <p>Anyone can make a building shout. Add a colorful panel here, a protruding volume there, a decorative screen across the front. These moves are easy to draw, easy to photograph, and easy to understand. They announce themselves. They demand attention.</p>
+                <p>Making a building that speaks softly and still holds presence is far harder. It requires a different set of skills: proportion, material sensitivity, shadow, restraint. The quiet facade does not rely on novelty. It relies on the fundamentals of architecture, executed with precision.</p>
+                <h3>The Problem with Loud</h3>
+                <p>Loud facades age quickly. The gesture that seemed bold and original five years ago looks dated today. This is not because the design was bad—it may have been very good in its moment—but because loud architecture is tied to the visual culture of its time. It reads as "of its era," which is another way of saying "not of ours."</p>
+                <p>Quiet facades age differently. They are tied to something more durable: the way light falls across a surface, the proportions of solid to void, the relationship between the building and its context. These qualities do not date. A Georgian terrace house from the 18th century looks contemporary in a way that a postmodern building from the 1980s does not, despite both being "old." The Georgian is quiet. The postmodern is loud.</p>
+                <h3>The Elements of Quiet</h3>
+                <p><strong>Proportion</strong> is the first element. A quiet facade is composed of elements—windows, doors, openings, solid panels—whose proportions relate to each other and to the whole. This is not about mathematical ratios, though those can help. It is about visual balance. The facade feels right without being able to explain exactly why.</p>
+                <p><strong>Shadow</strong> is the second element. Quiet facades use depth rather than color or material variety to create interest. A window recessed 200mm from the facade plane casts a shadow that changes throughout the day. A deep reveal at a door creates a threshold that reads as an event. These moves cost little but add richness that flat facades cannot match.</p>
+                <p><strong>Material</strong> is the third element. Quiet facades tend to use fewer materials, used consistently and honestly. One material for the primary volume, one for secondary elements, perhaps one for detailing. The restraint is the point. A facade that uses six materials is a facade that cannot decide.</p>
+                <h3>Quiet Does Not Mean Boring</h3>
+                <p>The misconception about quiet architecture is that it is safe, conservative, or lacking in ideas. This is not true. The most inventive architecture often appears quiet on first encounter. It reveals its ideas gradually—through the way it sits on its site, the way it handles light, the way it connects inside to outside.</p>
+                <p>A quiet facade can still be unconventional. It can use a material in a new way. It can play with scale. It can challenge expectations about what a residential facade should look like. The difference is that these moves are made within a framework of discipline rather than as isolated gestures.</p>
+                <h3>The Long View</h3>
+                <p>Designing a quiet facade requires confidence. It requires trusting that the qualities that make a building feel right—proportion, material, light, and shadow—are more important than the qualities that make it photogenic. It requires accepting that some people will not notice the facade at all, and understanding that this is not a failure. The buildings we love most are often the ones we stopped noticing years ago because they became part of the fabric of our daily lives.</p>
+            `,
+            articleFlow: `
+                <h2>The Unseen Architecture of Flow: Circulation Patterns in Residential Design</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">David Chen · 15 min read · Space Planning</p>
+                <p>Good circulation is invisible. You move through a well-planned house without thinking about it. The path from the front door to the kitchen is direct. The bathroom is where you expect it to be. You do not have to walk through the living room to get to the bedroom. These qualities are so fundamental that they are noticed only in their absence.</p>
+                <p>Bad circulation, by contrast, is the most common complaint about residential floor plans. You walk through the dining table to reach the kitchen. You have to cross the living room to get to the stairs. The front door opens directly into a wall. These are not aesthetic problems. They are functional failures, and they are surprisingly common.</p>
+                <h3>The Principles of Flow</h3>
+                <p>Residential circulation operates on a few simple principles. The first is that movement paths should be direct. The route from one point to another should be the shortest reasonable distance, without detours through unrelated spaces. A house where you have to walk through the living room to reach the kitchen has a circulation problem—not because walking through the living room is inherently bad, but because the kitchen is a high-traffic space, and routing all that traffic through a space intended for relaxation degrades the living room's function.</p>
+                <p>The second principle is that circulation should not pass through activity zones. A hallway that opens directly into the dining room is fine. A hallway that passes through the middle of the dining room, so that people walking to the bathroom must navigate around the table, is not. The distinction is between adjacent circulation (good) and interstitial circulation (bad).</p>
+                <p>The third principle is that circulation should be legible. A well-planned house makes it clear where you are and where you can go. You should not have to open doors to find the bathroom. You should not have to guess whether the hallway leads to a bedroom or a closet. Legibility is about sightlines, signage (in the form of architecture rather than text), and consistency of arrangement.</p>
+                <h3>Diagnosing Problems</h3>
+                <p>If you suspect your home has circulation problems, there is a simple test. Walk the main paths of the house—entrance to kitchen, kitchen to living room, living room to bedrooms, bedrooms to bathrooms—and note the following: How many turns does the path require? How many doors must be opened? Does the path pass through any space where someone might be sitting, eating, or working? Does the path cross itself or double back?</p>
+                <p>A well-planned path typically requires no more than one or two turns and passes through no more than one activity zone. If your path requires four turns, passes through the dining room and the living room, and ends at a door that opens inward into a space occupied by furniture, you have a plan worth reconsidering.</p>
+                <h3>Solutions</h3>
+                <p>The most effective solution to circulation problems is usually spatial reorganization: moving a wall, relocating a door, or reconfiguring the arrangement of rooms. This is obviously easier in new construction or gut renovation than in a finished home. But even in existing homes, there are often modest interventions that can improve flow significantly.</p>
+                <p>Widening a doorway. Changing a door swing. Removing a partition between a hallway and a kitchen. Creating a direct path where there was previously a detour. These are not glamorous changes, but they often make a bigger difference to daily life than any cosmetic update.</p>
+                <p>The goal is not perfection. Every house has compromises. The goal is a plan where movement feels natural, where the spaces you use most are the spaces you reach most easily, and where circulation supports rather than hinders the activities of daily life.</p>
+            `,
+            articleFurniture: `
+                <h2>The Case Against the Matching Set: Furniture Composition for Real Rooms</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Sarah Whitfield · 10 min read · Furniture</p>
+                <p>A room furnished from a single catalog is a room without a point of view. This is not a moral judgment about shopping habits. It is an observation about what happens when every piece of furniture in a room was designed to match every other piece: the room reads as a showroom vignette rather than a place where someone lives.</p>
+                <p>The matching set is the default approach for a reason. It is easy. It removes the anxiety of choice. If you buy the sofa, the loveseat, the chair, and the coffee table from the same collection, you know they will work together. There will be no clashes of color or style. The result will be coherent.</p>
+                <p>But coherence is not the same as interest. And the kind of coherence that comes from a matching set is achieved at the cost of the qualities that make a room feel personal: variety, surprise, the evidence of individual choices made over time.</p>
+                <h3>What Matching Sets Do Wrong</h3>
+                <p>The problem with matching sets is not that they are ugly. Many are quite attractive. The problem is that they are complete. There is nothing to add, nothing to change, nothing to suggest that the room will continue to evolve. A matching set says: this room is finished. It was purchased in one trip and it will be replaced in one trip. It has no history and no future.</p>
+                <p>There is also a practical problem. Matching sets tend to be scaled uniformly. Every piece is designed to the same aesthetic and often to similar dimensions. But real rooms need variety in scale. A large sofa may be balanced by a small side table. A heavy chair may be lightened by a slender floor lamp. When all the furniture comes from the same collection, this variety is missing, and the room can feel flat.</p>
+                <h3>Composing Instead of Matching</h3>
+                <p>The alternative to the matching set is composition. Compose a room by selecting individual pieces that work together without being identical. This requires more thought than buying a set, but the result is a room that feels collected rather than purchased.</p>
+                <p>The principles of composition are not complicated. Mix periods: a mid-century chair with a contemporary sofa. Mix materials: leather with linen, wood with metal, glass with ceramic. Mix scales: a substantial coffee table with a delicate side chair. The goal is not chaos. It is variety within a coherent framework.</p>
+                <p>What holds a composed room together? Color, usually. A limited palette—two or three colors, plus neutrals—can unify furniture from different sources and periods. Material can also unify: if every piece in the room includes some element of wood or metal, the repetition creates visual coherence without requiring matching designs.</p>
+                <h3>Starting Points</h3>
+                <p>If you are furnishing a room from scratch, resist the urge to buy everything at once. Start with the most important piece—usually the sofa or the bed—and live with it for a while. Let the room tell you what it needs. Add pieces gradually, as you find things that work. The room will take longer to complete, but it will be more interesting when it is done.</p>
+                <p>If you already have a matching set and want to break it up, start by removing one piece. Replace the matching coffee table with something different. Add a chair from a different era or a different designer. Even one non-matching element can shift the character of a room from showroom to lived-in.</p>
+            `,
+            articleSustainable: `
+                <h2>Sustainable Doesn't Have to Look Like It: High-Performance Materials in Conventional Aesthetics</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">James Okafor · 17 min read · Materials</p>
+                <p>Sustainability in residential design has an image problem. The prevailing visual language of sustainable architecture—green roofs, recycled materials, visible solar panels, rustic timber cladding—sends a clear signal: this building is sustainable. It announces its virtue.</p>
+                <p>There is nothing wrong with this. Visible sustainability has value as communication. But it is not the only option. Some of the most sustainable residential projects use materials and strategies that are indistinguishable from conventional construction. They perform better, last longer, and use fewer resources—without looking like they are trying to save the world.</p>
+                <h3>The Problem with Visible Sustainability</h3>
+                <p>Visible sustainability has a lifecycle problem. Materials and strategies that are novel today become dated tomorrow. A building that was designed to look sustainable in 2010 may look like a period piece in 2030. This is not a failure of the design; it is the nature of visual trends. But it means that the sustainable message is time-limited.</p>
+                <p>More importantly, visible sustainability can limit adoption. Many homeowners and developers are sympathetic to environmental goals but do not want their house to look like a statement. They want a home that looks like the other homes in the neighborhood, performs better, and costs less to operate. High-performance materials that don't announce themselves address this constituency.</p>
+                <h3>Invisible Sustainability</h3>
+                <p>Some of the most effective sustainable strategies are completely invisible. A well-insulated building envelope, high-performance glazing, careful air sealing, and efficient mechanical systems are all sustainable measures that have no visual signature. They simply make the building perform better.</p>
+                <p>Material choice can also be sustainable without being visible. Reclaimed timber looks like timber. Low-carbon concrete looks like concrete. High-recycled-content steel looks like steel. The performance characteristics differ; the appearance does not.</p>
+                <p>This is not to say that appearance is irrelevant. Material selection always has visual consequences. But the point is that those consequences need not advertise sustainability. A house clad in reclaimed barn wood is making a visual choice that happens to be sustainable. A house clad in conventional-looking fiber cement can be equally sustainable in performance terms, without the visual signature.</p>
+                <h3>Strategies</h3>
+                <p><strong>Insulate beyond code requirements.</strong> The difference between code-minimum insulation and high-performance insulation is invisible. Both look the same from inside and outside. The only difference is energy consumption.</p>
+                <p><strong>Use reclaimed materials where they are structurally appropriate.</strong> Reclaimed timber beams, reclaimed brick, and reclaimed flooring all have lower embodied carbon than new materials. They also have the patina of age, which many people find attractive independent of sustainability.</p>
+                <p><strong>Specify durable materials.</strong> The most sustainable material is the one that lasts the longest. A roof that lasts 50 years is more sustainable than a roof that lasts 20, regardless of what it is made of. Durability is sustainability.</p>
+                <p><strong>Design for adaptation.</strong> A building that can be easily modified to suit changing needs is more sustainable than one that must be demolished and rebuilt. Flexible floor plans, non-load-bearing partitions, and accessible services all contribute to longevity.</p>
+                <h3>The Takeaway</h3>
+                <p>Sustainability does not require a particular aesthetic. It requires performance. A building can be highly sustainable and look entirely conventional. A building can be visually sustainable and perform poorly. The two qualities are related but not identical. For homeowners and architects who care about both environmental impact and visual coherence with their context, invisible sustainability offers a path that does not require choosing between the two.</p>
+            `,
+            articleDaylight: `
+                <h2>Daylight Is a Material: Designing with Sun Rather Than Against It</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Marco Rivera · 14 min read · Lighting</p>
+                <p>Before the first light fixture is specified, before the first switch is placed on the plan, the building has already been designed by the sun. Orientation, window size, shading strategy—these are the decisions that determine whether a room will be a delight to inhabit or a space that requires constant electrical compensation.</p>
+                <p>Daylight is not simply a source of illumination. It is a material with properties as specific as timber or stone. It has direction, intensity, color, and movement. It changes throughout the day and across the seasons. Understanding these properties is the first step toward designing with sun rather than against it.</p>
+                <h3>Orientation</h3>
+                <p>The direction a window faces determines the character of the light it admits. In the northern hemisphere, south-facing windows receive direct sun for much of the day. The light is warm and intense. It provides significant passive heat gain in winter and requires shading in summer. North-facing windows receive indirect light—cool, consistent, and diffuse. This light is ideal for workspaces and for rooms where visual comfort is a priority. It provides less heat and less variation.</p>
+                <p>East-facing windows receive direct sun in the morning, providing bright, warm light to start the day. West-facing windows receive direct sun in the afternoon and evening, which can be desirable for rooms used in the evening but problematic in hot climates, where afternoon sun creates overheating.</p>
+                <p>The ideal design response depends on the room and the climate. Bedrooms benefit from morning light, which supports waking. Living rooms benefit from afternoon and evening light. Kitchens and workspaces benefit from consistent, diffuse light, which suggests north-facing windows.</p>
+                <h3>Window Size and Placement</h3>
+                <p>The size and placement of windows determines how much light enters a room and where it falls. A large window admits more light but also more heat and more glare. A small window admits less light but is easier to control. The goal is not maximum glazing. It is appropriate glazing.</p>
+                <p>High windows admit light deep into a room while preserving wall space for furniture and privacy. Low windows provide views but admit light at a level where it is easily blocked by furniture. A combination of high and low windows can provide both.</p>
+                <p>Window placement also affects the quality of light. A window centered on a wall creates a symmetric pool of light. A window offset to one side creates an asymmetric distribution that may be more interesting but harder to work with. In rooms where visual tasks occur, windows placed to the side of the task area rather than directly in front prevent glare.</p>
+                <h3>Shading</h3>
+                <p>Shading is the control system for daylight. Without shading, windows that face the sun become liabilities: too much heat in summer, too much glare during the day, too much loss of privacy at night. With shading, the same windows become assets.</p>
+                <p>External shading—overhangs, louvers, shutters—is more effective than internal shading because it blocks solar radiation before it enters the building. An overhang sized for the summer sun angle can completely shade a south-facing window in summer while allowing direct sun in winter. Internal blinds and curtains are less effective at heat control but more effective at glare control.</p>
+                <h3>The Quality of Light</h3>
+                <p>Daylight is not just about quantity. It is about quality. The color of daylight changes throughout the day, from the warm light of early morning to the cool, bluish light of overcast conditions. These changes affect how materials appear and how spaces feel. A room designed for white walls and neutral fabrics will look different at 8 AM and 4 PM. This is not a problem to be solved; it is a quality to be appreciated.</p>
+            `,
+            articleKitchen: `
+                <h2>The Working Kitchen: Layout Principles That Outlast Appliance Trends</h2>
+                <p class="meta" style="margin-bottom: 1.5rem;">Elena Marchetti · 16 min read · Home Design</p>
+                <p>Appliances change. The distance between the sink, the stove, and the refrigerator does not. This is the fundamental insight of kitchen design: the technology is ephemeral, but the ergonomics are permanent. A kitchen that was designed around a specific appliance model will need to be redesigned when that appliance is replaced. A kitchen designed around the work that happens in it can accommodate any appliance.</p>
+                <h3>The Work Triangle</h3>
+                <p>The work triangle is the oldest principle in kitchen design, and it remains the most useful. It describes the relationship between the three primary work zones: the sink (preparation and cleanup), the stove (cooking), and the refrigerator (storage). In a well-planned kitchen, these three points form a triangle with sides of approximately 1.2 to 2.7 meters. The triangle should not be interrupted by cabinetry or other obstacles, and the total distance around the perimeter should not exceed 7.9 meters.</p>
+                <p>The work triangle is not a rule to be followed blindly. Very small kitchens may not have room for a full triangle. Very large kitchens may have multiple work zones. But the principle—that the primary work points should be related to each other in a way that minimizes wasted movement—is sound regardless of kitchen size.</p>
+                <h3>Landing Zones</h3>
+                <p>Every major appliance and fixture needs landing space. This is the counter area adjacent to the appliance where you set things down while working. A refrigerator needs landing space for groceries. A stove needs landing space for hot pans. A sink needs landing space for draining and for dirty dishes. Without landing zones, you end up using the floor, the table, or whatever surface is closest—which is never the right surface.</p>
+                <p>Landing zones are often sacrificed in the interest of more cabinetry or more appliances. This is a mistake. A kitchen with fewer cabinets but adequate landing space is more functional than a kitchen with more storage but no place to set a pot.</p>
+                <h3>Circulation</h3>
+                <p>Kitchen circulation is a balance between work and movement. The cook needs space to work. Other people need space to pass through without interrupting the cook. The minimum aisle width in a kitchen is typically 1 meter. In kitchens where multiple people cook or where the kitchen is a primary circulation path, wider aisles are better.</p>
+                <p>The arrangement of the kitchen relative to other spaces matters as much as the internal layout. A kitchen that is open to a living area allows the cook to be part of the social life of the home. A kitchen that is closed off is better for containing noise and mess. Neither is inherently better; the right choice depends on how you use the space.</p>
+                <h3>Storage</h3>
+                <p>Kitchen storage should be organized around where things are used. Dishes near the dishwasher. Pots near the stove. Cutting boards near the prep area. Utensils near the work surface. When storage is organized by location of use rather than by type of item, the kitchen becomes more efficient without adding cabinets.</p>
+                <p>Deep drawers are generally more useful than cabinets with shelves. Full-extension drawers allow access to the back of the drawer, which shelves do not. A kitchen with drawers of varying depths—shallow for utensils, medium for pots, deep for large items—is more functional than a kitchen with uniform cabinets.</p>
+                <h3>Durability</h3>
+                <p>The kitchen is the hardest-working room in the house. Surfaces are exposed to heat, moisture, grease, sharp objects, and heavy use. Materials should be chosen for durability, not just appearance. Solid surface or stone countertops resist heat and stains. Cabinet finishes that can be wiped down are preferable to those that cannot. Flooring that is comfortable to stand on for long periods is worth the investment.</p>
+            `
+        };
+
+        function openModal(id) {
+            const modal = document.getElementById('modalOverlay');
+            const body = document.getElementById('modalBody');
+            body.innerHTML = modalContent[id] || '<h2>Content Coming Soon</h2><p>This article is currently being prepared for publication.</p>';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target === document.getElementById('modalOverlay')) {
+                closeModal();
+            }
+        }
+
+        // Close modal on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

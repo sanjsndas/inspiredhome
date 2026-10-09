@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Inspired Home Details</title>
+    <meta name="description" content="Contact the editorial team at Inspired Home Details. We welcome questions, corrections, and story ideas from readers, architects, and designers.">
+    <meta name="author" content="Inspired Home Details Editorial Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Inspired Home Details">
+    <meta property="og:description" content="Reach the editorial team at Inspired Home Details. We read every message from readers, designers, and architects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inspiredhomedetails.com/contact.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Inspired Home Details">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://inspiredhomedetails.com/contact.html">
+
+    <style>
+        /* ========== EDITORIAL RESET & BASE ========== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Editorial palette — warm, refined, print-inspired */
+            --ink: #1a1817;
+            --ink-soft: #3d3a38;
+            --ink-muted: #6b6562;
+            --paper: #faf8f5;
+            --paper-warm: #f3efe9;
+            --paper-card: #ffffff;
+            --rule: #e0dbd4;
+            --rule-light: #ebe7e0;
+            --accent: #9b6b4a;        /* oxidized copper / warm terracotta */
+            --accent-soft: #c49a7c;
+            --accent-bg: #f5ede6;
+            --sage: #6b7b6e;
+            --sage-bg: #edf0ed;
+            --slate: #4a5568;
+            --slate-bg: #edf2f7;
+
+            --font-serif: 'Georgia', 'Times New Roman', 'Palatino', 'Book Antiqua', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', monospace;
+
+            --max-content: 1240px;
+            --max-article: 740px;
+
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2.5rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+        }
+
+        html {
+            font-size: 17px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-transform: none;
+            margin-bottom: var(--space-xs);
+        }
+
+        .label-category {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .meta {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .meta span + span::before {
+            content: "·";
+            margin: 0 0.5em;
+            color: var(--rule);
+        }
+
+        .reading-time {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .excerpt {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .container--narrow {
+            max-width: var(--max-article);
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-lg) 0;
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding-left: var(--space-xl);
+            padding-right: var(--space-xl);
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+        }
+
+        .brand-mark {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        .brand-mark em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .brand-tagline {
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            border-left: 1px solid var(--rule);
+            padding-left: 0.8rem;
+        }
+
+        .site-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        .site-nav a {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-nav a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .site-nav a.active {
+            color: var(--ink);
+            border-bottom-color: var(--ink);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--rule);
+            padding: 0.4rem 0.7rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            cursor: pointer;
+            color: var(--ink-soft);
+            letter-spacing: 0.04em;
+        }
+
+        /* ========== CONTACT PAGE ========== */
+        .contact-hero {
+            background: var(--paper-warm);
+            border-bottom: 1px solid var(--rule);
+            padding: var(--space-2xl) 0;
+        }
+
+        .contact-hero-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .contact-hero h1 {
+            font-size: 2.8rem;
+            max-width: 780px;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+
+        .contact-hero .deck {
+            font-size: 1.15rem;
+            color: var(--ink-soft);
+            max-width: 620px;
+            line-height: 1.65;
+            font-style: italic;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+        }
+
+        .contact-form-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-form-section p {
+            font-size: 1rem;
+            color: var(--ink-soft);
+            margin-bottom: var(--space-xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: var(--space-xs);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            padding: 0.7rem 0.9rem;
+            border: 1px solid var(--rule);
+            background: var(--paper-card);
+            color: var(--ink);
+            outline: none;
+            transition: border-color 0.2s;
+            line-height: 1.5;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6562' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.9rem center;
+            padding-right: 2.2rem;
+        }
+
+        .btn-submit {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.8rem 2rem;
+            background: var(--ink);
+            color: var(--paper);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: var(--accent);
+        }
+
+        .contact-info-section {
+            padding-top: 0.25rem;
+        }
+
+        .contact-info-block {
+            border-top: 2px solid var(--ink);
+            padding-top: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .contact-info-block h3 {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: var(--space-md);
+            color: var(--ink);
+        }
+
+        .contact-info-block p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            line-height: 1.7;
+            margin-bottom: var(--space-sm);
+        }
+
+        .contact-info-block a {
+            color: var(--accent);
+            border-bottom: 1px solid var(--accent-soft);
+        }
+
+        .contact-info-block a:hover {
+            color: var(--ink);
+            border-bottom-color: var(--ink);
+        }
+
+        .contact-note {
+            background: var(--paper-warm);
+            padding: var(--space-lg);
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+            font-style: italic;
+            border-left: 3px solid var(--accent-soft);
+        }
+
+        .contact-note strong {
+            font-style: normal;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--paper-warm);
+            border-top: 1px solid var(--rule);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+            margin-top: var(--space-sm);
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--rule);
+            padding-top: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.03em;
+        }
+
+        /* ========== MODAL (reused from main site) ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 24, 23, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 500;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-xl);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--paper);
+            max-width: 680px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: var(--space-2xl);
+            position: relative;
+            border: 1px solid var(--rule);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: none;
+            border: 1px solid var(--rule);
+            width: 32px;
+            height: 32px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--ink-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .modal-content h2 {
+            margin-bottom: var(--space-lg);
+            font-size: 1.8rem;
+        }
+
+        .modal-content h3 {
+            font-size: 1.1rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-sm);
+        }
+
+        .modal-content p {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            margin-bottom: var(--space-md);
+            line-height: 1.7;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                gap: var(--space-md);
+            }
+
+            .site-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding-top: var(--space-md);
+                border-top: 1px solid var(--rule);
+            }
+
+            .site-nav.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--space-md);
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .header-inner,
+            .contact-hero-inner,
+            .contact-grid,
+            .footer-inner {
+                padding-left: var(--space-md);
+                padding-right: var(--space-md);
+            }
+
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+
+            .modal-content {
+                padding: var(--space-lg);
+            }
+        }
+
+        /* ========== UTILITY ========== */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                <span class="brand-tagline">Design Journal</span>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">Menu</button>
+
+            <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="terms.html">Terms Of Privacy</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookies Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTACT HERO ========== -->
+    <section class="contact-hero">
+        <div class="contact-hero-inner">
+            <h1>We read every message.</h1>
+            <p class="deck">Whether you have a question about an article, a correction to offer, or a subject you think we should cover—write to us. Inspired Home Details is a small editorial team, and we prioritize substantive correspondence over volume.</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT GRID ========== -->
+    <div class="contact-grid">
+
+        <!-- Form -->
+        <section class="contact-form-section" aria-label="Contact form">
+            <h2>Send a message</h2>
+            <p>Use this form for editorial inquiries, corrections, and general questions. For article submissions, please see the note to the right.</p>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="editorial">Editorial inquiry</option>
+                        <option value="correction">Correction</option>
+                        <option value="story-idea">Story idea</option>
+                        <option value="press">Press / media</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+                <p id="formStatus" class="meta" style="margin-top: var(--space-md); display: none;"></p>
+            </form>
+        </section>
+
+        <!-- Info -->
+        <section class="contact-info-section" aria-label="Contact information">
+            <div class="contact-info-block">
+                <h3>Editorial</h3>
+                <p>For article inquiries, corrections, or editorial correspondence:</p>
+                <p><a href="mailto:editorial@inspiredhomedetails.com">editorial@inspiredhomedetails.com</a></p>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>General</h3>
+                <p>For all other matters:</p>
+                <p><a href="mailto:hello@inspiredhomedetails.com">hello@inspiredhomedetails.com</a></p>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>Response Time</h3>
+                <p>We typically respond within three to five business days. We are a small team, and we prioritize substantive correspondence over volume. If your message requires a detailed reply, please allow additional time.</p>
+            </div>
+
+            <div class="contact-note">
+                <strong>Please Note</strong>
+                We do not accept guest posts, link insertions, or sponsored article proposals. Please do not send them. For advertising or partnership inquiries, please review our editorial independence policy before reaching out.
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                    <p>An independent editorial journal covering residential architecture, interior design, and the practical knowledge of making good spaces.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Articles</h4>
+                    <ul>
+                        <li><a href="index.html#articles">Interior Design</a></li>
+                        <li><a href="index.html#articles">Architecture</a></li>
+                        <li><a href="index.html#articles">Space Planning</a></li>
+                        <li><a href="index.html#articles">Materials</a></li>
+                        <li><a href="index.html#articles">Lighting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#" rel="noopener">Newsletter</a></li>
+                        <li><a href="#" rel="noopener">RSS Feed</a></li>
+                        <li><a href="#" rel="noopener">Instagram</a></li>
+                        <li><a href="#" rel="noopener">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Inspired Home Details. All rights reserved.</span>
+                <span>Independent editorial publication. No sponsored content.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== NAVIGATION ==========
+        function toggleNav() {
+            document.getElementById('siteNav').classList.toggle('open');
+        }
+
+        // ========== CONTACT FORM ==========
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const status = document.getElementById('formStatus');
+            const btn = form.querySelector('button[type="submit"]');
+
+            // Simulate submission
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                status.textContent = 'Thank you. Your message has been sent. We will be in touch within three to five business days.';
+                status.style.display = 'block';
+                status.style.color = 'var(--sage)';
+                btn.textContent = 'Sent';
+                btn.style.background = 'var(--sage)';
+                form.reset();
+
+                setTimeout(() => {
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    btn.style.background = '';
+                    status.style.display = 'none';
+                }, 4000);
+            }, 800);
+        }
+
+        // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

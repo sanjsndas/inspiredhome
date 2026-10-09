@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Inspired Home Details | Editorial Guidelines & Legal</title>
+    <meta name="description" content="Terms of Use for Inspired Home Details: editorial independence, user conduct, intellectual property, and legal terms for our design journal.">
+    <meta name="author" content="Inspired Home Details Editorial Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms of Use — Inspired Home Details">
+    <meta property="og:description" content="Terms of Use for Inspired Home Details: editorial independence, user conduct, intellectual property, and legal terms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inspiredhomedetails.com/terms.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Inspired Home Details">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://inspiredhomedetails.com/terms.html">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Use — Inspired Home Details",
+      "description": "Terms of Use for Inspired Home Details: editorial independence, user conduct, intellectual property, and legal terms.",
+      "url": "https://inspiredhomedetails.com/terms.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inspired Home Details",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://inspiredhomedetails.com/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        /* ========== EDITORIAL RESET & BASE ========== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ink: #1a1817;
+            --ink-soft: #3d3a38;
+            --ink-muted: #6b6562;
+            --paper: #faf8f5;
+            --paper-warm: #f3efe9;
+            --paper-card: #ffffff;
+            --rule: #e0dbd4;
+            --rule-light: #ebe7e0;
+            --accent: #9b6b4a;
+            --accent-soft: #c49a7c;
+            --accent-bg: #f5ede6;
+            --sage: #6b7b6e;
+            --sage-bg: #edf0ed;
+            --slate: #4a5568;
+            --slate-bg: #edf2f7;
+
+            --font-serif: 'Georgia', 'Times New Roman', 'Palatino', 'Book Antiqua', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', monospace;
+
+            --max-content: 1240px;
+            --max-article: 740px;
+
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2.5rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+        }
+
+        html {
+            font-size: 17px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-transform: none;
+            margin-bottom: var(--space-xs);
+        }
+
+        .label-category {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .label-category--sage { color: var(--sage); }
+        .label-category--slate { color: var(--slate); }
+
+        .meta {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .meta span + span::before {
+            content: "·";
+            margin: 0 0.5em;
+            color: var(--rule);
+        }
+
+        .reading-time {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .excerpt {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .container--narrow {
+            max-width: var(--max-article);
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-lg) 0;
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding-left: var(--space-xl);
+            padding-right: var(--space-xl);
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+        }
+
+        .brand-mark {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        .brand-mark em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .brand-tagline {
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            border-left: 1px solid var(--rule);
+            padding-left: 0.8rem;
+        }
+
+        .site-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        .site-nav a {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-nav a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--rule);
+            padding: 0.4rem 0.7rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            cursor: pointer;
+            color: var(--ink-soft);
+            letter-spacing: 0.04em;
+        }
+
+        /* ========== SEARCH ========== */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-bar input {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            padding: 0.45rem 0.75rem;
+            border: 1px solid var(--rule);
+            background: var(--paper);
+            color: var(--ink);
+            width: 180px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-bar input::placeholder {
+            color: var(--ink-muted);
+            font-style: italic;
+        }
+
+        /* ========== PAGE MASTHEAD ========== */
+        .page-masthead {
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper-warm);
+            padding: var(--space-2xl) 0 var(--space-xl);
+        }
+
+        .page-masthead-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .page-masthead h1 {
+            font-size: 3.2rem;
+            max-width: 780px;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+
+        .page-masthead .deck {
+            font-size: 1.15rem;
+            color: var(--ink-soft);
+            max-width: 620px;
+            line-height: 1.65;
+            font-style: italic;
+        }
+
+        /* ========== TERMS CONTENT ========== */
+        .terms-content {
+            max-width: var(--max-article);
+            margin: 0 auto;
+            padding: var(--space-2xl) var(--space-xl);
+        }
+
+        .terms-content p {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            margin-bottom: var(--space-lg);
+        }
+
+        .terms-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .terms-content h2 {
+            font-size: 1.8rem;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .terms-content h3 {
+            font-size: 1.25rem;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--ink);
+        }
+
+        .terms-content ul,
+        .terms-content ol {
+            margin: var(--space-md) 0 var(--space-lg) var(--space-xl);
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.7;
+        }
+
+        .terms-content li {
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-xs);
+        }
+
+        .terms-content li::marker {
+            color: var(--accent);
+        }
+
+        .terms-content strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .terms-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: var(--space-lg);
+            margin: var(--space-xl) 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .terms-content blockquote cite {
+            display: block;
+            margin-top: var(--space-sm);
+            font-style: normal;
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            color: var(--ink-muted);
+        }
+
+        .terms-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--accent);
+            margin: var(--space-2xl) 0;
+            border: none;
+        }
+
+        .terms-meta {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.03em;
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .terms-meta span + span::before {
+            content: "·";
+            margin: 0 0.5em;
+            color: var(--rule);
+        }
+
+        .terms-highlight {
+            background: var(--accent-bg);
+            border-left: 4px solid var(--accent);
+            padding: var(--space-lg) var(--space-xl);
+            margin: var(--space-xl) 0;
+        }
+
+        .terms-highlight p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* ========== NEWSLETTER ========== */
+        .newsletter-section {
+            background: var(--ink);
+            color: var(--paper);
+            padding: var(--space-3xl) 0;
+        }
+
+        .newsletter-inner {
+            max-width: var(--max-article);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+            text-align: center;
+        }
+
+        .newsletter-inner h2 {
+            font-size: 2rem;
+            color: var(--paper);
+            margin-bottom: var(--space-md);
+        }
+
+        .newsletter-inner p {
+            font-size: 1rem;
+            color: #b5aeaa;
+            max-width: 480px;
+            margin: 0 auto var(--space-xl);
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            padding: 0.7rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: var(--paper);
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #8a8480;
+            font-style: italic;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent-soft);
+        }
+
+        .newsletter-form button {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.7rem 1.4rem;
+            background: var(--accent);
+            color: var(--paper);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-soft);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--paper-warm);
+            border-top: 1px solid var(--rule);
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-inner {
+            max-width: var(--max-content);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+            margin-top: var(--space-sm);
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-sans);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--rule);
+            padding-top: var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.03em;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .page-masthead h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                gap: var(--space-md);
+            }
+
+            .site-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding-top: var(--space-md);
+                border-top: 1px solid var(--rule);
+            }
+
+            .site-nav.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--space-md);
+                text-align: center;
+            }
+
+            .terms-content ul,
+            .terms-content ol {
+                margin-left: var(--space-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .header-inner,
+            .page-masthead-inner,
+            .terms-content,
+            .footer-inner {
+                padding-left: var(--space-md);
+                padding-right: var(--space-md);
+            }
+
+            .page-masthead h1 {
+                font-size: 1.8rem;
+            }
+
+            .brand-tagline {
+                display: none;
+            }
+
+            .terms-content ul,
+            .terms-content ol {
+                margin-left: var(--space-md);
+            }
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                <span class="brand-tagline">Design Journal</span>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">Menu</button>
+
+            <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms Of Privacy</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookies Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE MASTHEAD ========== -->
+    <section class="page-masthead">
+        <div class="page-masthead-inner">
+            <h1>Terms of Use.</h1>
+            <p class="deck">The legal framework that governs your use of Inspired Home Details, and the editorial principles that guide our work. We believe in clarity — in design and in policy.</p>
+        </div>
+    </section>
+
+    <!-- ========== TERMS CONTENT ========== -->
+    <main role="main">
+        <article class="terms-content">
+
+            <div class="terms-meta">
+                <span>Last updated: 15 January 2026</span>
+                <span>Effective: 15 January 2026</span>
+            </div>
+
+            <p>Welcome to <strong>Inspired Home Details</strong>. These Terms of Use ("Terms") govern your access to and use of our website, content, and services. By accessing or using this site, you agree to be bound by these Terms. If you do not agree, please do not use the site.</p>
+
+            <p>We have written these Terms in plain language because we believe legal documents should be understandable. If you have questions, please <a href="contact.html" style="border-bottom: 1px solid var(--accent);">contact us</a>.</p>
+
+            <div class="terms-highlight">
+                <p><strong>Summary:</strong> Use our site respectfully. Our content is protected by copyright — don't republish it without permission. We are an independent editorial publication and do not accept sponsored content. We do our best to be accurate, but we are not liable for decisions you make based on our articles.</p>
+            </div>
+
+            <h2>1. About This Site</h2>
+
+            <p>Inspired Home Details is an independent editorial journal covering residential architecture, interior design, space planning, materials, lighting, and home design. The site is operated by Inspired Home Details ("we," "us," or "our").</p>
+
+            <p>We are an editorial publication. We are not a design firm, architecture practice, or construction contractor. The content we publish is for informational and educational purposes only.</p>
+
+            <h2>2. Acceptance of Terms</h2>
+
+            <p>By accessing, browsing, or using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html" style="border-bottom: 1px solid var(--accent);">Privacy Policy</a> and <a href="cookies.html" style="border-bottom: 1px solid var(--accent);">Cookies Policy</a>. These Terms apply to all visitors, users, and others who access the site.</p>
+
+            <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the site after any changes constitutes acceptance of the new Terms. We will indicate the date of the most recent revision at the top of this page.</p>
+
+            <h2>3. Intellectual Property</h2>
+
+            <h3>3.1 Our Content</h3>
+
+            <p>All content on this site — including but not limited to articles, essays, guides, photographs, illustrations, graphics, logos, and the design and arrangement of the site itself — is the property of Inspired Home Details or its content contributors and is protected by copyright, trademark, and other intellectual property laws.</p>
+
+            <p>You may:</p>
+            <ul>
+                <li>Read, share, and link to our articles for personal, non-commercial purposes.</li>
+                <li>Quote brief excerpts (up to 100 words) with clear attribution and a link back to the original article.</li>
+                <li>Share our content on social media using the sharing tools provided or by linking directly.</li>
+            </ul>
+
+            <p>You may not:</p>
+            <ul>
+                <li>Republish, reproduce, or distribute our content in full or in substantial part without written permission.</li>
+                <li>Use our content for commercial purposes, including in paid products, courses, or services.</li>
+                <li>Modify, adapt, or create derivative works from our content without permission.</li>
+                <li>Remove or alter any copyright notices, author attributions, or other proprietary markings.</li>
+                <li>Scrape, data-mine, or use automated systems to extract content from the site.</li>
+            </ul>
+
+            <p>To request permission to republish content, please <a href="contact.html" style="border-bottom: 1px solid var(--accent);">contact us</a>.</p>
+
+            <h3>3.2 User Contributions</h3>
+
+            <p>If you submit content to us — including comments, questions, or article suggestions — you grant us a non-exclusive, royalty-free, perpetual license to use, reproduce, and publish that content in connection with the site. You represent that you own or have the necessary rights to any content you submit.</p>
+
+            <h2>4. Editorial Independence</h2>
+
+            <p>Inspired Home Details is an independent editorial publication. We do not accept sponsored content, paid placements, or affiliate commissions. When we mention products, materials, or services, it is because they are relevant to the subject at hand, not because someone paid for the mention.</p>
+
+            <p>Our editorial team operates independently of any commercial interests. Advertisers, sponsors, and partners have no influence over editorial content. Any sponsored content, if ever published, will be clearly labeled as such.</p>
+
+            <blockquote>
+                “Our only obligation is to our readers. Independence is not a marketing position — it is the foundation of our editorial practice.”
+                <cite>— Editorial statement, first issue</cite>
+            </blockquote>
+
+            <h2>5. Accuracy and Disclaimer</h2>
+
+            <h3>5.1 Informational Purposes Only</h3>
+
+            <p>The content on this site is provided for general informational and educational purposes only. It is not intended as professional advice — architectural, engineering, legal, financial, or otherwise. You should consult qualified professionals before making decisions about your home or property.</p>
+
+            <h3>5.2 No Warranties</h3>
+
+            <p>We strive for accuracy, but we make no warranties or representations of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the site. Any reliance you place on such information is strictly at your own risk.</p>
+
+            <h3>5.3 Limitation of Liability</h3>
+
+            <p>To the fullest extent permitted by law, Inspired Home Details and its contributors shall not be liable for any loss or damage — including without limitation, indirect or consequential loss or damage — arising from the use of this site or reliance on any information provided.</p>
+
+            <h2>6. User Conduct</h2>
+
+            <p>By using this site, you agree not to:</p>
+            <ul>
+                <li>Use the site in any way that violates applicable laws or regulations.</li>
+                <li>Interfere with or disrupt the site or servers or networks connected to the site.</li>
+                <li>Attempt to gain unauthorized access to any part of the site or its systems.</li>
+                <li>Use the site to transmit any harmful code, viruses, or malicious software.</li>
+                <li>Harass, abuse, or harm other users or our editorial team.</li>
+                <li>Impersonate any person or entity or misrepresent your affiliation.</li>
+                <li>Collect or store personal information about other users without their consent.</li>
+            </ul>
+
+            <h2>7. Third-Party Links</h2>
+
+            <p>Our site may contain links to third-party websites or resources. These links are provided for your convenience and do not imply endorsement or affiliation. We have no control over the content, privacy policies, or practices of third-party sites and assume no responsibility for them.</p>
+
+            <p>You access third-party sites at your own risk and should review their terms and privacy policies.</p>
+
+            <h2>8. Privacy and Cookies</h2>
+
+            <p>Your use of the site is also governed by our <a href="privacy.html" style="border-bottom: 1px solid var(--accent);">Privacy Policy</a> and <a href="cookies.html" style="border-bottom: 1px solid var(--accent);">Cookies Policy</a>, which are incorporated into these Terms by reference. Please review them to understand our practices.</p>
+
+            <h2>9. Copyright Complaints</h2>
+
+            <p>We respect the intellectual property rights of others. If you believe that any content on our site infringes your copyright, please notify us with the following information:</p>
+            <ul>
+                <li>A description of the copyrighted work you claim has been infringed.</li>
+                <li>The URL or location of the allegedly infringing material on our site.</li>
+                <li>Your contact information, including address, telephone number, and email.</li>
+                <li>A statement that you have a good faith belief that the use is not authorized.</li>
+                <li>A statement, under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
+            </ul>
+
+            <p>Send copyright notices to: <strong>copyright@inspiredhomedetails.com</strong></p>
+
+            <h2>10. Termination</h2>
+
+            <p>We reserve the right to terminate or suspend your access to the site, without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties, or for any other reason at our sole discretion.</p>
+
+            <h2>11. Governing Law</h2>
+
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, United States, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in New York County, New York.</p>
+
+            <h2>12. Changes to These Terms</h2>
+
+            <p>We may update these Terms from time to time to reflect changes in our practices or legal requirements. The most current version will always be posted on this page with the effective date. We encourage you to review these Terms periodically.</p>
+
+            <p>Your continued use of the site after changes are posted constitutes your acceptance of the revised Terms.</p>
+
+            <h2>13. Severability</h2>
+
+            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+            <h2>14. Entire Agreement</h2>
+
+            <p>These Terms, together with our Privacy Policy and Cookies Policy, constitute the entire agreement between you and Inspired Home Details regarding your use of the site and supersede any prior agreements.</p>
+
+            <hr class="terms-divider">
+
+            <h2>15. Contact</h2>
+
+            <p>If you have any questions about these Terms of Use, please contact us:</p>
+
+            <p>
+                <strong>Inspired Home Details</strong><br>
+                Editorial Department<br>
+                Email: <a href="mailto:legal@inspiredhomedetails.com" style="border-bottom: 1px solid var(--accent);">legal@inspiredhomedetails.com</a><br>
+                Website: <a href="contact.html" style="border-bottom: 1px solid var(--accent);">inspiredhomedetails.com/contact</a>
+            </p>
+
+            <p style="margin-top: var(--space-xl); font-style: italic; color: var(--ink-muted);">These Terms of Use were last updated on 15 January 2026. We believe in plain language, editorial independence, and the importance of clear agreements. Thank you for reading.</p>
+
+        </article>
+    </main>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter-section" aria-label="Newsletter signup">
+        <div class="newsletter-inner">
+            <h2>The Weekly Detail</h2>
+            <p>One carefully considered article, one practical design insight, delivered every Sunday. No promotions, no clickbait, no noise.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('button').style.background='#6b7b6e'; this.querySelector('input').value='';">
+                <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="brand-mark">Inspired<em>Home</em>Details</span>
+                    <p>An independent editorial journal covering residential architecture, interior design, and the practical knowledge of making good spaces. Published from the conviction that design writing should be useful, not merely aspirational.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Articles</h4>
+                    <ul>
+                        <li><a href="index.html#articles">Interior Design</a></li>
+                        <li><a href="index.html#articles">Architecture</a></li>
+                        <li><a href="index.html#articles">Space Planning</a></li>
+                        <li><a href="index.html#articles">Materials</a></li>
+                        <li><a href="index.html#articles">Lighting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#" rel="noopener">Newsletter</a></li>
+                        <li><a href="#" rel="noopener">RSS Feed</a></li>
+                        <li><a href="#" rel="noopener">Instagram</a></li>
+                        <li><a href="#" rel="noopener">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Inspired Home Details. All rights reserved.</span>
+                <span>Independent editorial publication. No sponsored content.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== NAVIGATION ==========
+        function toggleNav() {
+            document.getElementById('siteNav').classList.toggle('open');
+        }
+
+        // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
